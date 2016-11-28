@@ -23,5 +23,12 @@ public class HelloServlet extends HttpServlet {
         out.flush();
         out.close();
     }
-    
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        ServletOutputStream out = resp.getOutputStream();
+        out.write("<a href='www.baidu.com'>A</a>".getBytes());
+        out.flush();
+        out.close();
+    }
 }

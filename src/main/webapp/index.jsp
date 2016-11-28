@@ -1,5 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=GBK"
+    pageEncoding="GBK"%>
 <html>
+<title>Hello Man</title>
 <body>
-<h2>Hello Heroku!Test</h2>
+	<form action="hello" method="post">
+		ÓÃ»§Ãû£º<input type="text" />
+		<input type="submit">
+	</form>
 </body>
 </html>
