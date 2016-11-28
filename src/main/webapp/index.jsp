@@ -4,7 +4,7 @@
 <title>Hello Man</title>
 <body>
 	<form action="hello" method="post">
-		用户名：<input type="text" />
+		用户名：<input type="text" name="user" />
 		<input type="submit">
 	</form>
 </body>

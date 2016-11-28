@@ -26,12 +26,13 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        
-        if(req.getParameter("user").equals("yzmctrip")){
-	        ServletOutputStream out = resp.getOutputStream();
+        ServletOutputStream out = resp.getOutputStream();
+        if(req.getParameter("user").equals("yzmctrip")){ 
 	        out.write("<a href='https://www.3131hu.com/'>A</a>".getBytes());
-	        out.flush();
-	        out.close();
+      	}else{
+      		out.write("user name error!d".getBytes());
       	}
+      	out.flush();
+	      out.close();
     }
 }
