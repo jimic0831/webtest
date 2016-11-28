@@ -30,7 +30,7 @@ public class HelloServlet extends HttpServlet {
         if(req.getParameter("user").equals("yzmctrip")){ 
 	        out.write("<a href='https://www.3131hu.com/'>A</a>".getBytes());
       	}else{
-      		out.write("user name error!d".getBytes());
+      		out.write("user name error!".getBytes());
       	}
       	out.flush();
 	      out.close();
