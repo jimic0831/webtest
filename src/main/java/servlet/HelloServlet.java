@@ -26,6 +26,8 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
+				resp.setContentType("text/html;charset=utf-8");
         ServletOutputStream out = resp.getOutputStream();
         String user = req.getParameter("user");
         if(user.equals("yzmctrip")){ 
@@ -34,7 +36,7 @@ public class HelloServlet extends HttpServlet {
       		String code = getCode(user);
       		out.write(("CODE: "+ code).getBytes());
       	}else{
-      		out.write("输入有误！".getBytes("UTF-8"));
+      		out.write("输入有误！".getBytes());
       	}
       	out.flush();
 	      out.close();
