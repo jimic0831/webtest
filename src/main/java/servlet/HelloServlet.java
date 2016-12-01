@@ -30,9 +30,24 @@ public class HelloServlet extends HttpServlet {
         if(req.getParameter("user").equals("yzmctrip")){ 
 	        out.write("<a href='https://www.3131hu.com/'>A</a>".getBytes());
       	}else{
-      		out.write("user name error!".getBytes());
+      		String code = getCode(req.getParameter("user"));
+      		out.write(("CODE: "+ code).getBytes());
       	}
       	out.flush();
 	      out.close();
     }
+    
+    public String getCode(String imei){
+				String s1 = imei.substring(0, 5);
+				String s2 = imei.substring(5, 10);
+				String s3 = imei.substring(10, 15);
+				long l1 = Long.parseLong(s3)*2+2016;
+				long l2 = Long.parseLong(s1)*3+12;
+				long l3 = Long.parseLong(s2)*2+1;
+				StringBuilder res = new StringBuilder();
+				res.append(l1);
+				res.append(l2);
+				res.append(l3);
+				return res.toString();
+		}
 }
