@@ -36,7 +36,7 @@ public class HelloServlet extends HttpServlet {
       		String code = getCode(user);
       		out.write(("CODE: "+ code).getBytes());
       	}else{
-      		out.write("ÊäÈëÓĞÎó£¡".getBytes("UTF-8"));
+      		out.write("è¾“å…¥æœ‰è¯¯ï¼".getBytes("UTF-8"));
       	}
       	out.flush();
 	      out.close();
