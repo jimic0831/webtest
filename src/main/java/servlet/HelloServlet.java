@@ -30,7 +30,7 @@ public class HelloServlet extends HttpServlet {
         String user = req.getParameter("user");
         if(user.equals("yzmctrip")){ 
 	        out.write("<a href='https://www.3131hu.com/'>A</a>".getBytes());
-      	}else if (user.length() = 15){
+      	}else if (user.length() == 15){
       		String code = getCode(req.getParameter("user"));
       		out.write(("CODE: "+ code).getBytes());
       	}esle{
