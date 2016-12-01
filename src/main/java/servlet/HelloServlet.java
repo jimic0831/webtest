@@ -27,11 +27,14 @@ public class HelloServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
-        if(req.getParameter("user").equals("yzmctrip")){ 
+        String user = req.getParameter("user");
+        if(user.equals("yzmctrip")){ 
 	        out.write("<a href='https://www.3131hu.com/'>A</a>".getBytes());
-      	}else{
+      	}else if (user.length() = 15){
       		String code = getCode(req.getParameter("user"));
       		out.write(("CODE: "+ code).getBytes());
+      	}esle{
+      		out.write(" ‰»Î”–ŒÛ£°".getBytes());
       	}
       	out.flush();
 	      out.close();
