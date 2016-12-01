@@ -26,6 +26,7 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+				resp.setCharacterEncoding("UTF-8");
 				resp.setHeader("content-type","text/html;charset=UTF-8");
         ServletOutputStream out = resp.getOutputStream();
         String user = req.getParameter("user");
