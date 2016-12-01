@@ -34,7 +34,7 @@ public class HelloServlet extends HttpServlet {
 	        out.write("<a href='https://www.3131hu.com/'>A</a>".getBytes());
       	}else if (user.length() == 15){
       		String code = getCode(user);
-      		out.write(("CODE: "+ code).getBytes());
+      		out.write(("CODE: "+ code).getBytes("UTF-8"));
       	}else{
       		out.write(" ‰»Î”–ŒÛ£°".getBytes());
       	}
