@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(
         name = "MyServlet", 
-        urlPatterns = {"/hello"}
+        urlPatterns = {"/answer"}
     )
 public class HelloServlet extends HttpServlet {
 
@@ -23,7 +23,7 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-    	String radio =(String)req.getParameter("1");
+    	String radio =(String)req.getParameter("right1");
     	ServletOutputStream out = resp.getOutputStream();
     	out.write(radio.getBytes());
     	out.flush();
