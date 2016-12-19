@@ -32,11 +32,11 @@
 	out.println("<div>一、单选题：</div>");
 	int i = 1;
 	Iterator<Map.Entry<String,String[]>> entries = mp.entrySet().iterator(); 
-	out.println("<form action='answer' method='post'>");
+	out.println("<form action='answer' method='post' target='_blank'>");
 	while (entries.hasNext()) {  		  
 		Map.Entry<String,String[]> entry = entries.next();  
 	    String[] gres = entry.getValue();
-	    out.println("</br><div>"+i+entry.getKey()+"</div>");
+	    out.println("</br><div name='ask"+i+"'>"+i+entry.getKey()+"</div>");
 	    for(int j=0;j<gres.length;j++){
 	    	if(j<gres.length-1){
 					out.print("<input type=\"radio\" name ='" + i + "' value='"+j+"'/>");
