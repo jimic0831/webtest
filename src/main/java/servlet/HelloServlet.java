@@ -25,7 +25,7 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
     	PrintWriter pw = resp.getWriter();
     	boolean flag = true;
-    	pw.write("<title>½á¹ûÒ³</title>");
+    	pw.write("<title>ç»“æœé¡µ</title>");
     	StringBuilder reslut = new StringBuilder();
 		for(int i=1;i<50;i++){
 			String answer = null;
@@ -35,7 +35,7 @@ public class HelloServlet extends HttpServlet {
 			catch(Exception e){
 				String ask = (String)req.getParameter("ask"+i);
 				pw.write("<div>"+ask+"</div></br>");
-  			pw.write("<div>ÄãÎ´Ñ¡Ôñ£¬ÕıÈ·´ğ°¸£º"+right+"</div></br>");
+  			pw.write("<div>ä½ æœªé€‰æ‹©ï¼Œæ­£ç¡®ç­”æ¡ˆï¼š"+right+"</div></br>");
   			pw.flush();
   			pw.close();
 			}
@@ -51,10 +51,10 @@ public class HelloServlet extends HttpServlet {
     			flag = false;
     			String ask = (String)req.getParameter("ask"+i);
     			pw.write("<div>"+ask+"</div></br>");
-    			pw.write("<div>ÕıÈ·´ğ°¸£º"+right+"</div></br>");
+    			pw.write("<div>æ­£ç¡®ç­”æ¡ˆï¼š"+right+"</div></br>");
     		}
     	}
-	    if(flag) pw.write("¹§Ï²ÄúÈ«²¿´ğ¶ÔÁË£¡");
+	    if(flag) pw.write("æ­å–œæ‚¨å…¨éƒ¨ç­”å¯¹äº†ï¼");
 	    pw.flush();
 	    pw.close();
     }
