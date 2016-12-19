@@ -29,7 +29,7 @@
 		}
 	}
 	br.close();
-	out.println("<div>一、单选题：</div>");
+	out.println("<title>Java三级考试选择题</title><div>一、单选题：</div>");
 	int i = 1;
 	Iterator<Map.Entry<String,String[]>> entries = mp.entrySet().iterator(); 
 	out.println("<form action='answer' method='post' target='_blank'>");

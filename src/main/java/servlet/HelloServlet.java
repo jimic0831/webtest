@@ -31,7 +31,7 @@ public class HelloServlet extends HttpServlet {
 			String right = (String)req.getParameter("right"+i);
 			try{
 				answer =(String)req.getParameter(i+"");}
-			catch(NullPointerException e){
+			catch(Exception e){
 				String ask = (String)req.getParameter("ask"+i);
 				pw.write("<div>"+ask+"</div></br>");
     			pw.write("<div>你未选择，正确答案："+right+"</div></br>");
