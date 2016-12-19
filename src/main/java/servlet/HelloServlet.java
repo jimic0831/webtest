@@ -24,6 +24,7 @@ public class HelloServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
     	PrintWriter pw = resp.getWriter();
+    	boolean flag = true;
     	pw.write("<title>结果页</title>");
     	StringBuilder reslut = new StringBuilder();
 		for(int i=1;i<50;i++){
@@ -34,7 +35,9 @@ public class HelloServlet extends HttpServlet {
 			catch(Exception e){
 				String ask = (String)req.getParameter("ask"+i);
 				pw.write("<div>"+ask+"</div></br>");
-    			pw.write("<div>你未选择，正确答案："+right+"</div></br>");
+  			pw.write("<div>你未选择，正确答案："+right+"</div></br>");
+  			pw.flush();
+  			pw.close();
 			}
     		if(answer.equals("0")) 
     			answer = "A";
@@ -45,10 +48,14 @@ public class HelloServlet extends HttpServlet {
     		else if(answer.equals("3"))
     			answer = "D";
     		if(!answer.equals(right)){
+    			flag = false;
     			String ask = (String)req.getParameter("ask"+i);
     			pw.write("<div>"+ask+"</div></br>");
     			pw.write("<div>正确答案："+right+"</div></br>");
     		}
     	}
+	    if(flag) pw.write("恭喜您全部答对了！");
+	    pw.flush();
+	    pw.close();
     }
 }
