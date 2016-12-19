@@ -22,6 +22,7 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+      resp.setContentType("text/html; charset=utf-8");
     	PrintWriter pw = resp.getWriter();
     	boolean flag = true;
     	pw.write("<title>结果页</title>");
