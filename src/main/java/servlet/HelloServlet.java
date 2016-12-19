@@ -31,8 +31,9 @@ public class HelloServlet extends HttpServlet {
 			String answer = null;
 			String right = (String)req.getParameter("right"+i);
 			try{
-				answer =(String)req.getParameter(i+"");}
-			catch(Exception e){
+				answer =(String)req.getParameter(i+"");
+			}catch(Exception e){
+				pw.write("alert('error')");
 				String ask = (String)req.getParameter("ask"+i);
 				pw.write("<div>"+ask+"</div></br>");
   			pw.write("<div>你未选择，正确答案："+right+"</div></br>");
