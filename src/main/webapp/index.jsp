@@ -8,7 +8,7 @@
 <%@page import="java.util.Map"%>
 
 <% 
-	File f = new File("timu.txt");
+	File f = new File("/timu.txt");
 	FileReader fr = new FileReader(f);
 	BufferedReader br = new BufferedReader(fr);
 	Map<String,String[]> mp = new HashMap<String,String[]>();
