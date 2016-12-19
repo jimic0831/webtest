@@ -23,7 +23,7 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-    	String radio =(String)req.getParameter("right1");
+    	String radio =(String)req.getParameter("1");
     	ServletOutputStream out = resp.getOutputStream();
     	out.write(radio.getBytes());
     	out.flush();
