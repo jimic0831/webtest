@@ -1,0 +1,413 @@
+1. 试题: 在WINDOWS环境下，ODBC在_________中设置
+A. 控制面板
+B. 注册表
+C. 浏览器
+D. 写字板
+A
+
+2. 阅读以下描述:
+<jsp-config>
+<jsp-property-group>
+<url-pattern>*.jsp</url-pattern>
+<scripting-invalid>false</scripting-invalid>
+</jsp-property-group>
+</jsp-config>
+JSP页面上的代码如下:
+10 x 5 = ${10 * 5}<br>
+2 * 3 = <%= 2 * 3 %><br>  则以下正确的是?
+A. JSP页面转换时发生错误
+B. JSP页面转换成功，但没有任何响应内容
+C. ”10 x 5 = 50” 和 ”2 * 3 = 6” 都在结果中显示
+D. 文本”10 x 5 = 50” 在结果页面上显示, 但 ”2 * 3 = 6” 未显示
+C
+
+3. 假设在helloapp应用中有一个HelloServlet类，它在web.xml文件中的配置如下:
+<servlet>
+  <servlet-name> HelloServlet </servlet-name>
+  <servlet-class>org.javathinker.HelloServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name> HelloServlet </servlet-name>
+  <url-pattern>/hello</url-pattern>
+</servlet-mapping>
+那么在浏览器端访问HelloServlet的URL是什么? 
+A. http://localhost:8080/HelloServlet
+B. http://localhost:8080/helloapp/HelloServlet
+C. http://localhost:8080/helloapp/org/javathinker/hello
+D. http://localhost:8080/helloapp/hello
+D
+
+4. Customer类中有一个Set类型的orders属性，用来存放Order订单对象，在Customer.hbm.xml文件中，用哪个元素映射orders属性？
+A. <set>
+B. <one-to-many>
+C. <many-to-one>
+D. <property>
+A
+
+5. conn为连接到某数据源的 JDBC连接对象。为了返回该数据源下的所有表的描述信息，应调用语句
+A. ResultSet rs = conn.getSchemas();
+B. ResultSet rs = conn.getTables();
+C. ResultSet rs = conn.getMetaData().getSchemas();
+D. ResultSet rs = conn.getMetaData().getTables();
+D
+
+6. 事务隔离级别是由谁实现的?
+A. Java应用程序
+B. Hibernate
+C. 数据库系统
+D. JDBC驱动程序
+C
+
+7. 所有数据库都支持的访问方法是
+A. RMI
+B. JDBC
+C. ODBC
+D. 以上都不是
+C
+
+8. 可以调用DataSource的方法________获得数据库连接。
+A. Delegate
+B. Factory
+C. connect
+D. getConnection
+D
+
+9. 为了察看一个ResultSet的各列名总列数等元信息，应使用____获得与该ResultSet相关的ResultSetMetaData对象。
+A. DriverManager的getMetaData()方法
+B. Connection接口的getMetaData()方法
+C. Statement接口的getMetaData()方法
+D. ResultSet接口的getMetaData()方法
+B
+
+10. 使用下面的Connection 的哪个方法可以建立一个PreparedStatement接口(  )
+A. createPrepareStatement()
+B. prepareStatement()
+C. createPreparedStatement()
+D. preparedStatement()
+B
+
+11. Struts中的ActionServlet属于MVC模式中的（）
+A. 视图
+B. 模型
+C. 控制器
+D. 业务层
+C
+
+12. 试题:在事务的声明设置中，如果事务特性的值是“RequiresNew”，则暗示了下列哪一个？
+A. 当调用 bean 方法时事务必须已经运行
+B. 当调用任何方法时，bean 需要总是已经启动一个新的事务
+C. bean 或方法根本不能包含在事务中
+D. bean 参与运行时事务但不需要事务
+B
+
+13. 当通过JDBC的Statement对象执行一个Select语句得到ResultSet后，该ResultSet的当前游标位于
+A. 第一个记录前
+B. 第一个纪录
+C. 最后一个记录
+D. 最后一个记录后
+A
+
+14. 下面的描述错误的是 (  )
+A. Statement的executeQuery()方法会返回一个结果集
+B. Statement的executeUpdate()方法会返回是否更新成功的boolean值
+C. 使用ResultSet中的getString()可以获得一个对应于数据库中char类型的值
+D. ResultSet中的next()方法会使结果集中的下一行成为当前行
+B
+
+15. 在Jdbc中可以调用数据库的存储过程的接口是 (  )
+A. Statement
+B. PreparedStatement
+C. CallableStatement
+D. PrepareStatement
+C
+
+16. 为了将主 JSP页面分为几个区域，每个区域显示一个子 JSP页面，可考虑采取什么方案？
+A. 主 JSP页面使用 jsp:forward动作
+B. 主 JSP页面使用多个 @page指令
+C. 主 JSP页面使用 jsp:include动作
+D. 主 JSP页面使用 Frame结构的 html
+C
+
+17. 当使用 GET请求方法向 Web服务器提交表单时，如用户名密码等表单信息一般存放在
+请求报文的_____位置。
+A. 请求行
+B. Connection标题行
+C. Host标题行
+D. 请求消息主体
+A
+
+18. servlet可通过由容器传递来的 HttpServletRequest对象的_____方法来获取客户请求的输入参数。
+A. getParameter
+B. getProtocol
+C. getContentType
+D. getAttribute
+A
+
+19. 在 HTTP响应中，状态代码 403表示
+A. 服务器无法找到请求指定的资源
+B. 请求消息中存在语法错误
+C. 请求需要通过身份验证和/或授权
+D. 服务器理解客户的请求，但由于客户权限不够而拒绝处理
+D
+
+20. 对于以下程序代码：
+int a=9;
+int b=0;
+if(a>9) 
+  b=1;
+else
+  b=-1;
+执行完以上程序代码，变量b的取值是什么?
+A. 0
+B. 0
+C. 1
+D. -1
+D
+
+21. 某 Web应用的 Web.xml有以下片断。 
+<filter> 
+ <filter-name>LogFilter</filter-name>
+ <filter-class>filters.LogFilter</filter-class> 
+</filter> 
+<filter-mapping> 
+<filter-name>LogFilter</filter-name> 
+<servlet-name>myServlet</servlet-name> 
+</filter-mapping> 
+则可以断定
+A. 该 Web应用中包含一类名为 LogFilter的过滤器
+B. 过滤器 LogFilter只对 myServlet起作用
+C. 可通过 URL: http://服务器名 :端口/LogFilter访问该过滤器
+D. myServlet只拥有一个过滤器
+A
+
+22. 试题:下列哪种方法是在 Tag 接口中声明的？
+A. doStartTag()
+B. startTag()
+C. doBeginTag()
+D. beginTag()
+A
+
+23. 试题:关于 HttpSessionBindingListener 接口，下列哪些选项是正确的?
+A. 它是一个标记接口。
+B. 接口声明仅有一种方法，即 valueBound() 方法。
+C. 接口声明有两种方法，即 valueBound() 方法和 valueUnBound() 方法。
+D. 接口声明有三种方法，即 valueBound() 方法.valueUnBound() 方法和 valueReBound() 方法。
+C
+
+24. 在struts的配置文件中，action节点的哪一个属性用于action指定引用的actionForm（）
+A. name
+B. attribute
+C. scope
+D. path
+A
+
+25. 在 HTTP请求报文中，发送给服务器的消息主体的媒体类型保存在 _____标题中。
+A. Accept
+B. Accept-Language
+C. User-Agent
+D. Content-Type
+D
+
+26. 下列对CSS”关联选择符”表述不正确的一项是？
+A. 关联选择符只不过是一个用空格隔开的两个或更多的单一选择符组成的字符串
+B. 选择符可以指定一般属性
+C. 它们的优先权比单一的选择符大
+D. 关联选择符也是一类单一选择符
+D
+
+27. 自定义的 Servlet应重载 HttpServlet类的_____方法以响应客户发出的 POST请求方
+法。
+A. POST
+B. onPost
+C. doPost
+D. ResponsePost
+C
+
+28. 在 HTTP响应中，状态代码 404表示
+A. 服务器无法找到请求指定的资源
+B. 请求消息中存在语法错误
+C. 请求需要通过身份验证和/或授权
+D. 服务器理解客户的请求，但由于客户权限不够而拒绝处理
+A
+
+29. 在某个基于 Struts框架的 Web应用中， RegisterForm为一个继承自 ActionForm的类。当框架调用其 validate方法返回____时，表示该 ActionForm的状态是一致的。
+A. true
+B. false
+C. null
+D. ActionErrors
+C
+
+30. 试题:<jsp:useBean> 是如何分类的?
+A. 作为用户自定义的 XML 标记
+B. 作为用户自定义的 JSP 标记
+C. 作为标准的 HTML 标记
+D. 作为标准的 JSP 标记
+D
+
+31. 创建一个有多个框架的页面，要求页面分为4列，第一列为100像素宽，第二列为余下窗口的50%，第三列占余下空间的2/3，最后一列占余下空间的1/3，下列语句正确的是
+A. <FRAMESET COLS=“100，50%*，2*，*”>
+B. <FRAMESET COLS=”100,7*,*2*,*”>
+C. <FRAMESET COLS=”100,50%,2*,*”>
+D. <FRAMESET COLS=”100,50%,*,*”>
+A
+
+32. 查看以下 JSP脚本： 
+<body> 
+<% 
+//TODO:在此添加代码 
+%> 
+</body> 
+为了枚举本 JSP页面内的所有属性名字，应采用以下哪个选项的方案？
+A. 调用page.getAttributeNames();
+B. 调用 session.getAttributeNames();
+C. 调用 application.getAttributeNames();
+D. 调用 pageContext.getAttributeNamesInScope(PageContext.PAGE_SCOPE);
+D
+
+33. 下面的描述正确的是 (  )
+A. PreparedStatement继承自Statement
+B. Statement继承自PreparedStatement
+C. ResultSet继承自Statement
+D. CallableStatement继承自PreparedStatement
+A
+
+34. 在Jdbc中使用事务,想要回滚事务事务的方法是 (  )
+A. Connection的commit()
+B. Connection的setAutoCommit()
+C. Connection的rollback()
+D. Connection的close()
+C
+
+35. 以下哪条SQL语句的作用是从CUSTOMERS表查找出性别为女性，并且按照年龄升序排列？
+A. select * from CUSTOMERS where GENDER=\”女性\” order AGE
+B. select * from CUSTOMERS where GENDER=\”女性\” order by AGE DESC
+C. select * from CUSTOMERS where GENDER=\”女性\” order by AGE
+D. select * from CUSTOMERS order by AGE asc  where GENDER=\”女性\”
+C
+
+36. 在JDK中，把Java源程序编译为类文件的命令是什么？
+A. java
+B. javac
+C. jar
+D. compile
+B
+
+37. 在第一行创建的Integer对象在什么时候结束生命周期？
+Integer o1=new Integer(10); //line1
+Integer o2=o1; //line2
+o1=null;  //line3
+o2=new Integer(10);  //line4
+o2=null; //line5
+A. line2
+B. line3
+C. line4
+D. line5
+C
+
+38. Action中的execute方法执行完毕后，需要跳转到show.jsp这个页面，下列写法中那些从形式上是正确的（）
+A. return ”show.jsp”
+B. return ”show”;
+C. return mapping.findForward(”show.jsp”);
+D. return mapping.findForward(”show”);
+C
+
+39. 如果数据库中某个字段为numberic型,可以通过结果集中的哪个方法获取 (  )
+A. getNumberic()
+B. getDouble()
+C. setNumberic()
+D. setDouble()
+B
+
+40. 如果 Stateful Session bean 对知道事务的状态感兴趣，则其应该执行下列哪个接口？
+A. SessionSynchronization 接口
+B. SessionSerialization 接口
+C. SessionStatus 接口
+D. SessionSync 接口
+A
+
+41. 以下哪个不是Hibernate的主键生成机制？
+A. sequence
+B. native
+C. foreign
+D. hex
+D
+
+42. 变量 AppInfo引用 Web应用程序相关的 Servlet上下文对象。可以使用下列哪个选项的代码将应用程序范围的属性“Version”设置为字符串值“ 2.1.1”？
+A. AppInfo.getInitParameter(”Version”,”2.1.1”);
+B. AppInfo.setInitParameter(”Version”,”2.1.1”);
+C. AppInfo.setAttribute(”Version”,”2.1.1”);
+D. AppInfo.getAttribute(”Version”,”2.1.1”);
+C
+
+43. 关于 HttpSessionBindingListener，下列哪些陈述是正确的？
+A. 当 HttpSessionBindingListener 绑定到会话或从会话解绑定时会通知对象。
+B. 当任何对象绑定到会话或从会话解绑定时，HttpSessionBindingListener 会通知其中一个对象。
+C. 当所有对象绑定到会话或从会话解绑定时，HttpSessionBindingListener 会通知其中一个对象。
+D. 当没有对象绑定到会话或从会话解绑定时，HttpSessionBindingListener 会通知其中一个对象。
+A
+
+44. 一个 ServletContext 对象可用来为多少个 Web 应用程序存储应用程序数据？
+A. 一个
+B. 两个
+C. 三个
+D. 零个
+A
+
+45. 在 Web应用 MyWebApp根路径下部署了一个 JSP页: 
+----------- PageCounter.jsp清单 ----------- 
+<%@ page contentType=”text/html; charset=GBK” %> 
+<html> 
+<head><title> PageCounter </title></head> 
+<body> 
+<jsp:useBean id=”myBean” scope=”request” class=”com.mycompany.bean.CounterBean” /> 
+<p>您已经访问 <%=myBean.getCount%>次</p> 
+</body> 
+</html> 
+其中，com.mycompany.bean.CounterBean类的定义如下： 
+--------- CounterBean.java清单 -------
+package com.mycompany.bean; 
+public class CounterBean { 
+ private int count=0; 
+public int getCount() { return ++count; } 
+} 
+MyWebApp启动后，在同一浏览器中连续两次访问该页面，第二次访问页面的结果为
+A. 您已经访问 0次
+B. 您已经访问 1次
+C. 您已经访问 2次
+D. JSP引擎发现语法错误
+B
+
+46. 为了从字符串“this-is-a-test”中区分出 4个单词并输出到 JSP页面输出中，可利用 JSTL1.0标签库的 _____标签。
+A. <c:forEach>
+B. <c:set>
+C. <c:sql>
+D. <c:forTokens>
+D
+
+47. 已知Tomcat的安装目录为“D:\Tomcat406\”。MyFirstWeb.WAR是一个打包好的 JAVA Web应用程序。为了将其部署到该 Tomcat服务器，应该将该WAR文件拷贝到
+A. D:\Tomcat\bin
+B. D:\Tomcat\server
+C. D:\Tomcat\webapps
+D. D:\Tomcat\common
+C
+
+48. <set>元素有一个cascade属性，如果希望Hibernate级联保存集合中的对象，casecade属性应该取什么值？
+A. none
+B. save
+C. delete
+D. save-update
+D
+
+49.以下程序代码对Customer的name属性修改了两次：
+tx = session.beginTransaction();
+Customer customer=(Customer)session.load(Customer.class,new Long(1));
+customer.setName(\”Jack\”);
+customer.setName(\”Mike\”);
+tx.commit();
+执行以上程序，Hibernate需要向数据库提交几条update语句？
+A. 0
+B. 1
+C. 2
+D. 3
+B
+
