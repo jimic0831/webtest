@@ -516,14 +516,10 @@ ABC
 用户名：空
 密码：空
 则下列选项的语句中哪些满足要求？
-A. <sql:setDataSource var=”myDS” scope=”page” 
-driver=”sun.jdbc.odbc.JdbcOdbcDriver” url=”jdbc:odbc:northwind” />
-B. <sql:setDataSource var=”myDS” scope=”page” 
-driver=”jdbc:odbc:northwind” url=”sun.jdbc.odbc.JdbcOdbcDriver” />
-C. <sql:setDataSource var=”myDS” 
-driver=”sun.jdbc.odbc.JdbcOdbcDriver” url=”jdbc:odbc:northwind” />
-D. <sql:setDataSource var=”myDS” 
-driver=”jdbc:odbc:northwind” url=”sun.jdbc.odbc.JdbcOdbcDriver” />
+A. <sql:setDataSource var=”myDS” scope=”page” driver=”sun.jdbc.odbc.JdbcOdbcDriver” url=”jdbc:odbc:northwind” />
+B. <sql:setDataSource var=”myDS” scope=”page” driver=”jdbc:odbc:northwind” url=”sun.jdbc.odbc.JdbcOdbcDriver” />
+C. <sql:setDataSource var=”myDS” driver=”sun.jdbc.odbc.JdbcOdbcDriver” url=”jdbc:odbc:northwind” />
+D. <sql:setDataSource var=”myDS” driver=”jdbc:odbc:northwind” url=”sun.jdbc.odbc.JdbcOdbcDriver” />
 E. 以上都不满足
 AC
 
@@ -537,12 +533,9 @@ AC
 </body> 
 若希望引用 JSP页面所在 Web应用的上下文对象并在 Tomcat控制台输出其名字，则______。
 A. 无法实现该目标
-B. ServletContext x = this.getServletContext(); 
-System.out.println(x.getServletContextName());
-C. ServletContext x = page.getServletContext(); 
-System.out.println(x.getServletContextName());
-D. ServletContext x = pageContext.getServletContext() 
-System.out.println(x.getServletContextName());
+B. ServletContext x = this.getServletContext(); System.out.println(x.getServletContextName());
+C. ServletContext x = page.getServletContext(); System.out.println(x.getServletContextName());
+D. ServletContext x = pageContext.getServletContext() System.out.println(x.getServletContextName());
 E. System.out.println(application.getServletContextName());
 BDE
 

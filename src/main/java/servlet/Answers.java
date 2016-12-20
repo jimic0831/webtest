@@ -28,12 +28,17 @@ public class Answers extends HttpServlet {
     	PrintWriter pw = resp.getWriter();
     	boolean flag = true;
     	pw.write("<title>结果页</title><body leftmargin='20'>");
+    	String xzt = "";
 		for(int i=1;i<50;i++){
 			String answer =(String)req.getParameter("ansr"+i);
 			String right = (String)req.getParameter("right"+i);
 			if(answer!=null){
 	    		if(!answer.equals(right)){
 	    			flag = false;
+	    			if(xzt.equals("")){
+	    					xzt = "<div>单选题结果：<div></br>";
+	    					pw.write(xzt);
+	    			}
 	    			pw.write("<div>第"+i+"题："+answer+" 答错!</div>");
 	    			pw.write("<div>正确答案："+right+"</div></br>");
 	    		}
@@ -43,6 +48,7 @@ public class Answers extends HttpServlet {
     			pw.write("<div>正确答案："+right+"</div></br>");
 			}
     	}
+    xzt = "";
 		for(int j=1;j<19;j++){
 			String[] answers = req.getParameterValues("ansrm"+j);
 			String rightm = (String)req.getParameter("rightm"+j);
@@ -59,6 +65,10 @@ public class Answers extends HttpServlet {
 				}
 			}else {
 					flag = false;
+					if(xzt.equals("")){
+	    					xzt = "<div>多选题结果：<div></br>";
+	    					pw.write(xzt);
+	    			}
 					pw.write("<div>第"+j+"题未作答! </div>");
 	    		pw.write("<div>正确答案："+rightm+"</div></br>");
 			}
