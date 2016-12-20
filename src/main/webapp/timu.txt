@@ -411,3 +411,185 @@ C. 2
 D. 3
 B
 
+二、多选题
+1. 阅读以下代码：
+<function>
+<name>spin</name>
+<function-class>com.example.Spinner</function-class>
+<function-signature>
+java.lang.String spinIt()
+</function-signature>
+<function>
+以下哪些为true？
+A. 方法必须定义为： public String spin()
+B. 方法必须在web.xml 中定义逻辑名称”spin”
+C. 方法必须定义为： public String spinIt()
+D. 方法必须定义为： public static String spin()
+E. 方法必须定义为： public static String spinIT().
+F. 该类必须命名为 Spinner，且必须在包com.example中
+EF
+
+2. 在Web应用中设置HTML文档的标题时，标题信息存放在上下文中进行初始化，以下哪些做法是正确的？
+A. <title>${titleStr}</title>
+B. <title>${initParam.titleStr}</title>
+C. <title>${params[0].titleStr}</title>
+D. <title>${paramValues.titleStr}</title>
+E. <title>${initParam['titleStr']}</title>
+F. <title>${servletParams.titleStr}</title>
+G. <title>${request.get(”titleStr”)}</title>
+BE
+
+3. 接口RowSet继承了接口________。可以调用RowSet中的方法________来填充其数据区。
+A. Statement
+B. ResultSet
+C. update
+D. populate
+BC
+
+4. 以下哪些属于Session的方法？
+A. load()
+B. save()
+C. delete()
+D. update()
+E. open()
+F. close()
+ABCDF
+
+5. 以下哪些是定义在ResultSet中用于Cursor定位的方法
+A. next()
+B. beforeFirst()
+C. afterLast()
+D. isBeforeFirst()
+E. absolute(int)
+F. relative(int)
+ABCEF
+
+6. 关于jdbc正确说法
+A. 在一个connection上可以创建多个Statement并且同时执行不同的SQL语句
+B. 通过设置一个connection属性就可以做一个数据库事务
+C. 通过设置一个Statement属性就可以做一个数据库事务
+D. 可以直接在在线结果集Resuleset中更新数据库记录
+BD
+
+7. 阅读以下代码段：
+<%java.util.Map map = new java.util.HashMap();
+request.setAttribute(”map”, map);
+map.put(”a”,”b”);
+map.put(”b”,”c”);
+map.put(”c”,”d”);%>
+<%-- insert code here -- %>
+以下哪些EL表达式语句，可放置在16行处，并值为”d” ?
+A. ${map.c}
+B. ${map[c]}
+C. ${map[”c”]}
+D. ${map.map.b}
+E. ${map[map.b]}
+F. ${map.map(map.b)}
+ACE
+
+8. 以下哪些能提供getSession方法？
+A. javax.servlet.http.HttpServletRequest
+B. javax.servlet.http.HttpSessionContext
+C. javax.servlet.http.HttpsServletResponse
+D. javax.servlet.http.HttpSessionBindingEvent
+E. javax.servlet.http.HttpSessionAttributeEvent
+AD
+
+9. ActionForm中的validate方法返回什么值（）
+A. null
+B. 空字符串
+C. 一个空的ActionErrors对象
+D. 一个空的ActionError对象
+AC
+
+10. 在关系数据库中，作为表的主键应该满足什么条件?
+A. 不允许为空
+B. 不允许重复
+C. 主键值不允许被改变
+D. 不能以多个字段作为主键
+ABC
+
+11. 在JSP页面范围内创建满足以下条件的 DataSource对象：
+变量名：myDS
+驱动：JDBC-ODBC桥
+数据源：本地名为 northwind的 ODBC数据源
+用户名：空
+密码：空
+则下列选项的语句中哪些满足要求？
+A. <sql:setDataSource var=”myDS” scope=”page” 
+driver=”sun.jdbc.odbc.JdbcOdbcDriver” url=”jdbc:odbc:northwind” />
+B. <sql:setDataSource var=”myDS” scope=”page” 
+driver=”jdbc:odbc:northwind” url=”sun.jdbc.odbc.JdbcOdbcDriver” />
+C. <sql:setDataSource var=”myDS” 
+driver=”sun.jdbc.odbc.JdbcOdbcDriver” url=”jdbc:odbc:northwind” />
+D. <sql:setDataSource var=”myDS” 
+driver=”jdbc:odbc:northwind” url=”sun.jdbc.odbc.JdbcOdbcDriver” />
+E. 以上都不满足
+AC
+
+12. 查看以下 JSP脚本。 
+<body> 
+<% 
+{ 
+//TODO:在此添加代码 
+} 
+%> 
+</body> 
+若希望引用 JSP页面所在 Web应用的上下文对象并在 Tomcat控制台输出其名字，则______。
+A. 无法实现该目标
+B. ServletContext x = this.getServletContext(); 
+System.out.println(x.getServletContextName());
+C. ServletContext x = page.getServletContext(); 
+System.out.println(x.getServletContextName());
+D. ServletContext x = pageContext.getServletContext() 
+System.out.println(x.getServletContextName());
+E. System.out.println(application.getServletContextName());
+BDE
+
+13. 阅读以下代码：
+<%int[] nums = {42, 420, 4200};
+request.setAttribute(”foo”, nums);%>
+以下哪些是编译正确并且得到的值为true？ 
+正确的答案是
+A. ${true or false}
+B. ${requestScope[foo][0] > 500}
+C. ${requestScope[”foo”][1] = 420}
+D. ${(requestScope[”foo”][0] lt 50) && (3 gt 2)
+AD
+
+14. 以下哪些是Hibernate的主键生成机制？
+A. assigned
+B. increment
+C. identity
+D. hex
+E. foreign
+ABCE
+
+15. 关于HQL与SQL，以下哪些说法正确？
+A. HQL与SQL没什么差别
+B. HQL面向对象，而SQL操纵关系数据库
+C. 在HQL与SQL中，都包含select,insert,update,delete语句
+D. HQL仅用于查询数据，不支持insert,update和delete语句
+BD
+
+16. 把静态文本放在Resource Bundle中，而不是直接在JSP文件中包含这些静态文本，有什么优点?
+A. 提高可维护性
+B. 提高可重用性
+C. 支持国际化
+D. 提高运行速度
+ABC
+
+17. 在下面的选项中，哪些是TagSupport类的doStartTag()方法的有效返回值? 
+A. Tag.SKIP_BODY
+B. Tag.SKIY_PAGE
+C. Tag.EVAL_BODY_INCLUDE
+D. Tag.EVAL_PAGE
+AC
+
+18. 使用 jsp:forward同使用响应重定向相比
+A. jsp:forward减少一次客户-服务器往返
+B. 重定向减少一次客户-服务器往返
+C. jsp:forward可以向客户转发任意 URL的页面内容
+D. 重定向可以向客户转发任意 URL的页面内容
+AD
+
