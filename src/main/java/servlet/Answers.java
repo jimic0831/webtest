@@ -44,6 +44,10 @@ public class Answers extends HttpServlet {
 	    		}
 			}else{
 				flag = false;
+				if(xzt.equals("")){
+  					xzt = "<div>单选题结果：<div></br>";
+  					pw.write(xzt);
+	    	}
 				pw.write("<div>第"+i+"题未作答! </div>");
     			pw.write("<div>正确答案："+right+"</div></br>");
 			}
@@ -59,16 +63,20 @@ public class Answers extends HttpServlet {
 					manswer.append(answers[k]);
 				}
 				if(!manswer.toString().equals(rightm)){
-					flag = false;
+						flag = false;
+						if(xzt.equals("")){
+	    					xzt = "<div>多选题结果：<div></br>";
+	    					pw.write(xzt);
+	    			}
 	    			pw.write("<div>第"+j+"题："+manswer.toString()+" 答错!</div>");
 	    			pw.write("<div>正确答案："+rightm+"</div></br>");
 				}
 			}else {
 					flag = false;
 					if(xzt.equals("")){
-	    					xzt = "<div>多选题结果：<div></br>";
-	    					pw.write(xzt);
-	    			}
+  					xzt = "<div>多选题结果：<div></br>";
+  					pw.write(xzt);
+	    		}
 					pw.write("<div>第"+j+"题未作答! </div>");
 	    		pw.write("<div>正确答案："+rightm+"</div></br>");
 			}
